@@ -56,12 +56,15 @@ const buildPlayers = (players, type) => {
     // depending of type of player(hero|villain)
     // Type your code here
     for(let i=0;i<players.length;i++){
-        fragment=
+        player=
             `<div class="player">
    <img src="${players[i].image}" alt="">
    <div class="name">${players[i].name}</div>
    <div class="strength">${players[i].strength}</div>
 </div>`
+         if (players[i].type == type){
+            fragment = fragment + player;
+        } 
     }
 
 
